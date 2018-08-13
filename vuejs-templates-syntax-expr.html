@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{5+5}}<br/>
+        {{ok ? 'YES' : 'NO'}}
+        {{message.split('').reverse().join('')}}
+        <div v-bind:id="'list-'+id">薛尧博客</div>
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                ok: true,
+                message: 'SIMON.XUE',
+                id: 1
+            }
+        })
+    </script>
+</body>
+</html>

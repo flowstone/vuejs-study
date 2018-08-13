@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p v-if="seen">现在你看到我</p>
+        <template v-if="ok">
+            <h1>菜鸟教程</h1>
+            <h1>学的不仅是技术，更是梦想</h1>
+            <h1>哈哈哈，打字辛苦啊</h1>
+        </template>
+    </div>
+    <script>
+        new Vue({
+            el:'#app',
+            data: {
+                seen: true,
+                ok: false
+            }
+        })
+    </script>
+</body>
+</html>

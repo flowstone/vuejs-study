@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(value, key, index) in objects">
+                {{index}}.{{key}}:{{value}}
+            </li>
+        </ul>
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            data: {
+                objects: {
+                    name: '薛尧博客',
+                    url: 'http://www.runoob.com',
+                    description: '我只是在打盹'
+                }
+            }
+        })
+    </script>
+</body>
+</html>

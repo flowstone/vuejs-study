@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <lable for="r1">
+            修改颜色
+        </lable>
+        <input type="checkbox" v-model="class1" id="r1"><br/>
+        <div v-bind:class="{{'class1':class1}}">
+            directiva v-bind:class
+        </div>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                class1: false
+            }
+        })
+    </script>
+</body>
+</html>

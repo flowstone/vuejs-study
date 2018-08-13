@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="dist/vue.js"></script>
+</head>
+<body>
+    <div id="vue_det">
+        <h1>site: {{site}}</h1>
+        <h1>url: {{url}}</h1>
+        <h1>{{detail()}}</h1>
+    </div>
+    <script>
+        new Vue({
+            el: "#vue_det",
+            data: {
+                site: "薛尧博客",
+                url: "http://www.xueyao.me",
+                alexa: 1000
+            },
+            methods: {
+                detail: function(){
+                    return this.site + "学习博客";
+                }
+            }
+        });
+    </script>
+</body>
+</html>
