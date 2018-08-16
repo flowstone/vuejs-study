@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <button v-on:click="green">Greet</button>
+</div>
+<script>
+    var app = new Vue({
+                el: "#app",
+                data: {
+                    name: 'Vue.js'
+                },
+                methods: {
+                    green: function(event) {
+                        alert('Hello' + this.name + '!');
+                        if (event) {
+                            alert(event.target.tagName);
+                        }
+                    }
+                }
+            })
+    app.green();
+</script>
+</body>
+</html>
