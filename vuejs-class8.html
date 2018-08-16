@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <div v-bind:style="[baseStyles, overridingStyles]">测试内容</div>
+</div>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            baseStyle: {
+                color: "red",
+                fontSize: 25
+            },
+            overridingStyles: {
+                background: "green"
+            }
+        }
+    })
+</script>
+</body>
+</html>

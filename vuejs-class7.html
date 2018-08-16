@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="dist/vue.js"></script>
+
+</head>
+<body>
+<div id="app">
+    <div v-bind:style="{color: activeColor,fontSize: fontSize+'px'}">测试</div>
+</div>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            activeColor: "red",
+            fontSize: 25
+        }
+    })
+</script>
+</body>
+</html>
