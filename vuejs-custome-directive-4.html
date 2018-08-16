@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div v-runoob="{color: 'green',text:'菜鸟教程'}"></div>
+    </div>
+    <script>
+        Vue.directive('runoob',function (el,binding) {
+            el.innerHTML = binding.value.text;
+            el.style.backgroundColor = binding.value.color;
+        })
+        new Vue({
+            el: "#app"
+        })
+    </script>
+</body>
+</html>
